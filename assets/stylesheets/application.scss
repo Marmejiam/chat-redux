@@ -1,7 +1,103 @@
 body {
   font-family: Helvetica;
+  background-color: white;
 }
 .app {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  .channel-list {
+    background-color: #B0C5A4;
+    height: 100vh;
+  }
+  .messages {
+    background-color: rgb(255, 255, 255);
+    // position: relative;
+    // height: 90vh; /* Hauteur exemple pour le conteneur de chat */
+    // overflow-x: auto;
+    position: relative
+  }
+  .messages-content { /* Nouveau conteneur pour messages-list et messages-input */
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
+
+    .message-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .messages-list {
+      background-color: rgb(255, 255, 255);
+      flex-grow: 1; //ramplir espace dispo
+      overflow-x: auto;
+      height: 50vh;
+    }
+    .titre-messages-list {
+      color: #D37676;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #D37676;
+    }
+      .message-author {
+        font-size: 18px;
+        color: rgb(255, 0, 76);
+      }
+      .message-date {
+        font-size: 9px;
+        color: rgb(173, 173, 173);
+      }
+      .message-content {
+        color: #3a3a3a;
+      }
+
+  .messages-input {
+    margin-bottom: 20px;
+  }
+    .btn-send {
+      background-color: #D37676;
+      color: white;
+      margin-top: 10px;
+    }
+
+  .channel-list {
+    cursor: pointer;
+    list-style-type: none;
+  }
+    .titre-channel-list {
+      color: #3a3a3a;
+      text-align: center;
+      font-family: "Protest Strike", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+
+    }
+    .fa-user-friends {
+      color: white;
+      background-color: #D37676;
+      border-radius: 50%;
+      padding: 5px;
+      margin: 5px;
+      font-size: 12px; /* Ajuste la taille de l'icône */
+      line-height: 1; /* Ajuste l'espacement vertical autour de l'icône */
+      width: 24px; /* Contrôle la largeur du conteneur de l'icône */
+      height: 24px; /* Contrôle la hauteur du conteneur de l'icône */
+      display: inline-block;
+
+    }
+    .channels-list {
+      background-color: white;
+      border-radius: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: #3a3a3a;
+      align-items: center; /* Cette ligne assure que l'icône et le texte sont alignés verticalement au centre */
+      gap: 10px;
+    }
+  .channel.selected {
+    font-weight: bold;
+    color: #D37676;
+  }
+    ul {
+      list-style-type: none;
+    }
 }
